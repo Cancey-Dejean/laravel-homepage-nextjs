@@ -1,16 +1,13 @@
-import { Nunito } from 'next/font/google'
 import '@/app/global.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-
-const nunitoFont = Nunito({
-    subsets: ['latin'],
-    display: 'swap',
-})
+import { scandiaBold, scandiaMedium, scandiaRegular } from '@/utils/fonts'
 
 const RootLayout = ({ children }) => {
     return (
-        <html lang="en" className={nunitoFont.className}>
+        <html
+            lang="en"
+            className={`${scandiaMedium.variable} ${scandiaBold.variable}`}>
             <body>
                 <Header />
                 <main>{children}</main>
